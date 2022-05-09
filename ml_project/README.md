@@ -32,7 +32,7 @@ python3 -m src.predict_pipeline
 
 ### Структура проекта
 ```
-├─ ml_project
+└─ ml_project
    ├─ README.md
    ├─ __init__.py
    ├─ configs
