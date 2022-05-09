@@ -30,6 +30,57 @@ python3 -m src.train_pipeline +train_pipelines=forest_train_pipeline
 python3 -m src.predict_pipeline
 ```
 
+### Структура проекта
+```
+├─ ml_project
+   ├─ README.md
+   ├─ __init__.py
+   ├─ configs
+   │  ├─ default_predict_pipeline.yaml
+   │  ├─ default_train_pipeline.yaml
+   │  ├─ features
+   │  │  └─ default.yaml
+   │  ├─ model
+   │  │  ├─ logistic_regression.yaml
+   │  │  └─ random_forest.yaml
+   │  ├─ preprocessing
+   │  │  ├─ identity_transformer.yaml
+   │  │  └─ one_hot_transformer.yaml
+   │  ├─ split
+   │  │  └─ default.yaml
+   │  └─ train_pipelines
+   │     ├─ forest_train_pipeline.yaml
+   │     └─ lr_train_pipeline.yaml
+   ├─ data
+   │  └─ raw
+   │     └─ heart_cleveland_upload.csv
+   ├─ reports
+   │  └─ EDA_pandas_profiling.html
+   ├─ requirements.txt
+   ├─ src
+   │  ├─ __init__.py
+   │  ├─ data
+   │  │  ├─ __init__.py
+   │  │  ├─ features_params.py
+   │  │  ├─ make_dataset.py
+   │  │  └─ split_params.py
+   │  ├─ models
+   │  │  ├─ __init__.py
+   │  │  ├─ model_params.py
+   │  │  ├─ predict_model.py
+   │  │  └─ train_model.py
+   │  ├─ predict_pipeline.py
+   │  ├─ predict_pipeline_params.py
+   │  ├─ preprocessing
+   │  │  ├─ __init__.py
+   │  │  ├─ preprocessing_params.py
+   │  │  └─ transformers.py
+   │  ├─ train_pipeline.py
+   │  ├─ train_pipeline_params.py
+   │  └─ utils.py
+   └─ visualize.py
+```
+
 ### Архитектурные и тактические решения:
 
 - Созданы конфигурации для обучения логистической регрессии и случайного леса.
